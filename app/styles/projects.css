@@ -1,0 +1,39 @@
+
+.projects-div {
+    padding-top: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.projects-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.projects-center {
+    place-items:inherit;
+}
+
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

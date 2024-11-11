@@ -1,0 +1,56 @@
+.hero-div{
+    min-height: 100vh;
+    background: no-repeat url('/profile-picture.png');
+    background-size: 21%;
+    background-position: left 100px top 165px;
+}
+
+.hero-content{
+    display: grid;
+    height: calc(100vh-60px);
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-para{
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    font-size: 6.70rem;
+    padding-top: 60px;
+}
+
+.hero-main p{
+    margin: 0;
+}
+
+.hidden-lg{
+    display: none;
+}
+
+@media(max-width:1024px){
+    .hero-div{
+        background-size: 50%;
+        background-position: center;
+    }
+
+    .hero-content{
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    
+    .hero-para{
+        font-size: 3rem;
+    }
+}
+
+@media(min-width:1024px){
+    .hero-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hidden-lg{
+        display: block;
+    }
+}
